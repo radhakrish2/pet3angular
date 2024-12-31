@@ -1,5 +1,5 @@
 
 export const environment = {
     production: false,
-    apiUrl: 'http://localhost:8080', // or the actual API URL
+    apiUrl: 'https://brave-beauty-production.up.railway.app', // or the actual API URL
   };
