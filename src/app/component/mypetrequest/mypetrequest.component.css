@@ -1,0 +1,132 @@
+/* Navbar Styling */
+app-navbar {
+    display: block;
+    width: 100%;
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  app-navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+  }
+  
+  app-navbar a:hover {
+    color: #f39c12;
+  }
+.requests-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .requests-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .requests-table th,
+  .requests-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .requests-table th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .requests-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .requests-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  /* Status Colors */
+  .requests-table td:nth-child(3) {
+    font-weight: bold;
+  }
+  
+  .requests-table td:nth-child(3):contains("PENDING") {
+    color: #f39c12;
+  }
+  
+  .requests-table td:nth-child(3):contains("APPROVED") {
+    color: #27ae60;
+  }
+  
+  .requests-table td:nth-child(3):contains("REJECTED") {
+    color: #e74c3c;
+  }
+  /* General Button Styles */
+.accept-btn, .reject-btn {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Accept Button */
+.accept-btn {
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.accept-btn:hover {
+  background: linear-gradient(135deg, #34d058, #28a745);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.accept-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Reject Button */
+.reject-btn {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reject-btn:hover {
+  background: linear-gradient(135deg, #f35466, #dc3545);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.reject-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Disabled Button State */
+.accept-btn:disabled, .reject-btn:disabled {
+  background: linear-gradient(135deg, #c0c0c0, #a9a9a9);
+  color: #f5f5f5;
+  cursor: not-allowed;
+  box-shadow: none;
+}

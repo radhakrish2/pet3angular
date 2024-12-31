@@ -1,0 +1,30 @@
+
+<div class="profile-container">
+    <div class="profile-header">
+      <h1>Welcome, <span id="username">John Doe</span>!</h1>
+      <p>Your personalized pet adoption dashboard</p>
+    </div>
+  
+    <div class="profile-sections">
+      <div class="profile-card" id="myProfile" (click)="goToProfile()">
+        <h2>My Profile</h2>
+        <p>View and edit your personal information</p>
+      </div>
+  
+      <div class="profile-card" id="myPets" (click)="goToPet()">
+        <h2>My Pets</h2>
+        <p>Manage the pets you've added for adoption</p>
+      </div>
+  
+      <div class="profile-card" id="myPetRequests" (click)="goToMypet()">
+        <h2>My Pets' Requests</h2>
+        <p>See requests for adoption of your pets</p>
+      </div>
+  
+      <div class="profile-card" id="requestedPets"(click)="goToMyreq()">
+        <h2>I Requested Pets</h2>
+        <p>Check the status of pets you've requested</p>
+      </div>
+    </div>
+  </div>
+  

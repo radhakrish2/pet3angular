@@ -1,0 +1,110 @@
+<app-navbar></app-navbar>
+
+<div class="dashboard-container">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <ul>
+      <li><a href="/admin/users">Users</a></li>
+      <li><a href="/admin/pets">Pets</a></li>
+      <li><a href="/admin/requests">Requests</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Dashboard Content -->
+  <div class="main-content">
+    <h2>Admin Dashboard</h2>
+
+    <!-- All Users Section -->
+    <div class="section">
+      <h3>All Users</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>john&#64;example.com</td>
+            <td>Active</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jane Smith</td>
+            <td>jane"&#64;example.com</td>
+            <td>Inactive</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- All Pets Section -->
+    <div class="section">
+      <h3>All Pets Posted</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Pet ID</th>
+            <th>Name</th>
+            <th>Breed</th>
+            <th>Status</th>
+            <th>Posted by</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>101</td>
+            <td>Buddy</td>
+            <td>Labrador</td>
+            <td>Available</td>
+            <td>John Doe</td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td>Max</td>
+            <td>German Shepherd</td>
+            <td>Adopted</td>
+            <td>Jane Smith</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- All Requests Section -->
+    <div class="section">
+      <h3>All Adoption Requests</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Request ID</th>
+            <th>Pet Name</th>
+            <th>User Name</th>
+            <th>Status</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>201</td>
+            <td>Buddy</td>
+            <td>John Doe</td>
+            <td>Pending</td>
+            <td>2024-12-20</td>
+          </tr>
+          <tr>
+            <td>202</td>
+            <td>Max</td>
+            <td>Jane Smith</td>
+            <td>Approved</td>
+            <td>2024-12-21</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

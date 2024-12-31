@@ -1,0 +1,31 @@
+<div *ngIf="isLoading" class="loading">Loading...</div>
+
+<div *ngIf="errorMessage" class="error">
+  {{ errorMessage }}
+</div>
+
+<div *ngIf="pet && !isLoading" class="pet-details">
+  <h1>{{ pet.name }}</h1>
+  <img
+    *ngFor="let imageUrl of pet.imageUrls"
+    [src]="imageUrl"
+    alt="{{ pet.name }}"
+    class="pet-image"
+  />
+  <p><strong>Type:</strong> {{ pet.type }}</p>
+  <p><strong>Breed:</strong> {{ pet.breed }}</p>
+  <p><strong>Age:</strong> {{ pet.age }}</p>
+  <p><strong>Gender:</strong> {{ pet.gender }}</p>
+  <p><strong>Description:</strong> {{ pet.description }}</p>
+  <p><strong>Status:</strong> {{ pet.status }}</p>
+  <div *ngIf="pet.comments.length > 0">
+    <h3>Comments:</h3>
+    <ul>
+      <li *ngFor="let comment of pet.comments">
+        <p><strong>User:</strong> {{ comment.userId }}</p>
+        <p>{{ comment.content }}</p>
+        <p><small>{{ comment.createdDate | date:'short' }}</small></p>
+      </li>
+    </ul>
+  </div>
+</div> 
