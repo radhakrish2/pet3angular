@@ -4,28 +4,26 @@
   <table class="pets-table" *ngIf="pets.length > 0; else noPets">
     <thead>
       <tr>
-        <th>ID</th>
+        <th>Sno</th>
         <th>Name</th>
         <th>Type</th>
         <th>Breed</th>
         <th>Age</th>
-        <th>Gender</th>
-        <th>Description</th>
+   
         <th>Status</th>
         <th>Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let pet of pets">
-        <td>{{ pet.id }}</td>
+      <tr *ngFor="let pet of pets let i = index">
+        <td>{{ i + 1 }}</td>
         <td>{{ pet.name }}</td>
         <td>{{ pet.type }}</td>
         <td>{{ pet.breed }}</td>
         <td>{{ pet.age }}</td>
-        <td>{{ pet.gender }}</td>
-        <td>{{ pet.description }}</td>
+ 
         <td>{{ pet.status }}</td>
-        <td>
+        <td class="d-flex">
           <button (click)="editPet(pet.id)">Edit</button>
           <button (click)="deletePet(pet.id)">Delete</button>
         </td>

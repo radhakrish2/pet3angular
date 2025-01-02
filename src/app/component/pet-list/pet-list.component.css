@@ -15,10 +15,17 @@
     border-radius: 10px;
     width: 250px;
     margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
-  }
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.pet-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
   
   .pet-image {
     width: 100%;
@@ -32,7 +39,12 @@
   
   .pet-info h2 {
     margin: 10px 0;
-    font-size: 1.2em;
+    font-size: 1.2rem;
+  }
+
+  .pet-info h3 {
+    margin: 10px 0;
+    font-size: 14px;
   }
   
   .pet-info p {

@@ -6,6 +6,8 @@ import { Pet } from '../../models/pet.model';
 import { ApiResponse } from '../../models/api-response';
 import { AuthService } from '../../service/auth.service';
 import { User } from '../../models/user.model';
+import { routes } from '../../app.routes';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-postpet',
@@ -18,7 +20,7 @@ export class PostpetComponent {
   selectedImages: File[] = [];
   user: User | any = null; // Holds user data
 
-  constructor(private fb: FormBuilder, private petService: PetService, private authService:AuthService) {
+  constructor(private fb: FormBuilder, private petService: PetService, private authService:AuthService,private router:Router) {
     this.petForm = this.fb.group({
       name: ['', Validators.required],
       type: ['', Validators.required],
@@ -68,12 +70,14 @@ export class PostpetComponent {
 
       this.petService.savePet(pet, this.selectedImages).subscribe({
         next: (response: ApiResponse<Pet>) => {
-          alert('Pet added successfully!');
+          confirm('Pet added successfully!');
           this.petForm.reset();
+          this.router.navigate(['/home'])
+          
         },
         error: (err) => {
           console.error(err);
-          alert('An error occurred while adding the pet.');
+          alert('Please login first befor post your pet.');
         }
       });
     } else {
