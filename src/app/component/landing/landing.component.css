@@ -31,7 +31,7 @@ body, html {
   justify-content: center;
   height: 100%;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5);
+  background:#22222580; /* Slightly darkened navy blue overlay */
   padding: 20px;
 }
 
@@ -39,14 +39,16 @@ body, html {
   font-size: 4rem;
   font-weight: bold;
   margin: 0;
-  text-shadow: 2px 2px 8px #d83232cc;
+  text-shadow: 2px 2px 8px #202121; /* Steel blue shadow */
+  color:white;
 }
 
 .content p {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 15px 0;
-  text-shadow: 2px 2px 8px #d83232cc;
+  text-shadow: 2px 2px 8px #202121; /* Steel blue shadow */
+  color:white;
 }
 
 .content .btn {
@@ -54,16 +56,19 @@ body, html {
   padding: 15px 30px;
   font-size: 1.2rem;
   color: white;
-  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  background: linear-gradient(90deg, #00BFFF, #1E90FF); /* Sky blue gradient */
   border: none;
   border-radius: 50px;
   text-decoration: none;
-  box-shadow: 0px 4px 15px#d83232cc;
+  box-shadow: 0px 4px 15px #202121; /* Steel blue shadow */
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .content .btn:hover {
-  background: linear-gradient(90deg, #feb47b, #ff7e5f);
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+  background:linear-gradient(
+    90deg,
+    #1E90FF,
+    #00BFFF); /* Reverse sky blue gradient */
+  box-shadow: 0px 6px 20px rgba(30, 144, 255, 0.3); /* Slightly brighter shadow */
 }

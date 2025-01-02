@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from "../navbar/navbar.component";
 import { Router } from '@angular/router';
 import { Profile } from '../../models/profile';
+import { RefreshService } from '../../refresh-service.service';
+
 
 @Component({
   selector: 'app-login',
@@ -22,14 +24,18 @@ export class LoginComponent {
 
   errorMessage: string = '';
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router, private refreshService: RefreshService) {}
 
   onLogin() {
     this.authService.loginUser(this.loginRequest).subscribe({
       next: (response: ApiResponse<Profile>) => {
         if (response.statusCode === 200) {
+       
           this.authService.setToken(response.data.token);
           this.authService.setUserData(response.data.user); // Save user details globally
+          this.refreshService.triggerRefresh(); // Notify navbar to refresh
+           // Trigger refresh for other components
+         
           this.router.navigate(['/home']);
         } else {
           this.errorMessage = response.message;

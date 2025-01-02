@@ -13,7 +13,7 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
   const authService = inject(AuthService); // Inject AuthService
 
   // Check if the request is for login or register
-  if (req.url.includes('/login') || req.url.includes('/register')  || token==null) {
+  if (req.url.includes('/login') || req.url.includes('/register') ||   token==null) {
     // Pass the original request for login/register without modifying headers
     return next(req);
   }

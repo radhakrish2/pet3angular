@@ -1,86 +1,65 @@
-/* Container for the edit pet form */
+.container {
+  background-color: #87CEEB; /* Sky blue color */
+  padding: 2rem;
+  border-radius: 10px;
+}
+
 .edit-pet-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Header for the form */
-  .edit-pet-container h2 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  /* Style for the form labels */
-  .edit-pet-container label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  /* Style for text inputs, number inputs, and textarea */
-  .edit-pet-container input,
-  .edit-pet-container textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  /* Style for the buttons */
-  .edit-pet-container button {
-    width: 48%;
-    padding: 10px;
-    margin-top: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .edit-pet-container button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  .edit-pet-container button[type="submit"]:hover {
-    background-color: #45a049;
-  }
-  
-  .edit-pet-container button[type="button"] {
-    background-color: #f44336;
-    color: white;
-    margin-left: 4%;
-  }
-  
-  .edit-pet-container button[type="button"]:hover {
-    background-color: #e53935;
-  }
-  
-  /* For the textarea field */
-  .edit-pet-container textarea {
-    resize: vertical;
-    height: 100px;
-  }
-  
-  /* Add responsiveness for smaller screens */
-  @media screen and (max-width: 600px) {
-    .edit-pet-container {
-      padding: 15px;
-    }
-  
-    .edit-pet-container button {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  }
-  
+  background-color: #FFFFFF; /* White background for the form container */
+  border: 1px solid #87CEEB; /* Border matching the sky blue theme */
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.edit-pet-container h2 {
+  color: #007BFF; /* A slightly darker blue for the heading */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.edit-pet-container form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.edit-pet-container form label input,
+.edit-pet-container form label textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #87CEEB;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.edit-pet-container form label input:focus,
+.edit-pet-container form label textarea:focus {
+  border-color: #007BFF; /* Slightly darker blue for focus */
+  box-shadow: 0 0 3px #87CEEB;
+}
+
+.edit-pet-container button {
+  background-color: #007BFF; /* Button blue color */
+  color: #FFFFFF;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.edit-pet-container button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.edit-pet-container button[type="button"] {
+  background-color: #6c757d; /* Grey for cancel button */
+}
+
+.edit-pet-container button[type="button"]:hover {
+  background-color: #5a6268; /* Darker grey on hover */
+}

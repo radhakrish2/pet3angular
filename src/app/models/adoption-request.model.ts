@@ -4,5 +4,5 @@ export interface AdoptionRequest {
     status: 'PENDING' | 'APPROVED' | 'REJECTED';
     remarks: string;
     petId: number;
-    userId: number;
+    userId: number; 
   }

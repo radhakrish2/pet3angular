@@ -1,4 +1,3 @@
-
 <div class="requests-container">
   <h2>My Pet Requests</h2>
   <table class="requests-table">
@@ -14,40 +13,28 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>101</td>
-        <td>2024-12-20</td>
-        <td>PENDING</td>
-        <td>Waiting for review</td>
-        <td>1</td>
-        <td>5001</td>
+      <tr *ngFor="let request of adoptionRequests">
+        <td>{{ request.id }}</td>
+        <td>{{ request.requestDate }}</td>
+        <td>{{ request.status }}</td>
+        <td>{{ request.remarks }}</td>
+        <td>{{ request.petId }}</td>
+        <td>{{ request.userId }}</td>
         <td>
-          <button class="accept-btn" (click)="acceptRequest(101)">Accept</button>
-          <button class="reject-btn" (click)="rejectRequest(101)">Reject</button>
-        </td>
-      </tr>
-      <tr>
-        <td>102</td>
-        <td>2024-12-21</td>
-        <td>APPROVED</td>
-        <td>Adoption approved</td>
-        <td>2</td>
-        <td>5002</td>
-        <td>
-          <button class="accept-btn" (click)="acceptRequest(102)">Accept</button>
-          <button class="reject-btn" (click)="rejectRequest(102)">Reject</button>
-        </td>
-      </tr>
-      <tr>
-        <td>103</td>
-        <td>2024-12-22</td>
-        <td>REJECTED</td>
-        <td>Incomplete application</td>
-        <td>3</td>
-        <td>5003</td>
-        <td>
-          <button class="accept-btn" (click)="rejectRequest(103)">Accept</button>
-          <button class="reject-btn" (click)="rejectRequest(103)">Reject</button>
+          <button
+            class="accept-btn"
+            [disabled]="request.status === 'APPROVED'"
+            (click)="acceptRequest(request.id)"
+          >
+            Accept
+          </button>
+          <button
+            class="reject-btn"
+            [disabled]="request.status === 'REJECTED'"
+            (click)="rejectRequest(request.id)"
+          >
+            Reject
+          </button>
         </td>
       </tr>
     </tbody>

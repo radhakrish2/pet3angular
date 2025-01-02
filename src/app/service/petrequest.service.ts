@@ -9,7 +9,7 @@ import { AdoptionRequest } from '../models/adoption-request.model';
   providedIn: 'root'
 })
 export class PetrequestService {
-  private baseUrl = `${environment.apiUrl}/adoption-requests`; // Update the base URL as per your API endpoint
+  private baseUrl = `${environment.apiUrl}/api/adoption-requests`; // Update the base URL as per your API endpoint
 
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
@@ -20,9 +20,8 @@ export class PetrequestService {
   /** Create a new adoption request */
   createAdoptionRequest(dto: AdoptionRequest): Observable<ApiResponse<AdoptionRequest>> {
     return this.http.post<ApiResponse<AdoptionRequest>>(
-      `${this.baseUrl}/create`,
-      dto,
-      this.httpOptions
+      `${this.baseUrl}`,
+      dto
     );
   }
 

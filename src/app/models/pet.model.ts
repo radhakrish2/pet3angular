@@ -1,4 +1,5 @@
 import { Comment } from "./comment.model";
+import { User } from "./user.model";
 
 export interface Pet {
     id: number;
@@ -10,6 +11,6 @@ export interface Pet {
     description: string;
     status: 'AVAILABLE' | 'ADOPTED'; // Adjust based on your requirements
     imageUrls: string[];
-    ownerId: number;
+    owner: User;
     comments: Comment[];
   }

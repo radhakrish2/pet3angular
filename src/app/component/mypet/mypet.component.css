@@ -1,67 +1,83 @@
-.pets-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  color: #333;
 }
 
-h2 {
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #87CEEB; /* Sky blue background for the container */
+  height: 100vh;
+}
+
+.pets-container {
+  background-color: #ffffff; /* White background for the pets section */
+  border-radius: 10px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pets-container h2 {
+  color: #1E90FF; /* Sky blue color for the heading */
   text-align: center;
-  color: #333;
-  font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .pets-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 1rem;
 }
 
-.pets-table th, .pets-table td {
+.pets-table th,
+.pets-table td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  border: 1px solid #ddd;
 }
 
 .pets-table th {
-  background-color: #4CAF50;
+  background-color: #1E90FF; /* Sky blue header background */
   color: white;
-  font-size: 1.1rem;
 }
 
-.pets-table td {
-  font-size: 1rem;
+.pets-table tbody tr:nth-child(even) {
+  background-color: #f7f7f7; /* Light gray background for even rows */
 }
 
-.pets-table tr:hover {
-  background-color: #f1f1f1;
+.pets-table tbody tr:hover {
+  background-color: #f0f8ff; /* Light blue background on hover */
 }
 
-button {
-  padding: 8px 16px;
-  font-size: 1rem;
+.pets-table button {
+  padding: 8px 15px;
+  margin: 5px;
+  background-color: #00BFFF; /* Light sky blue button */
+  color: white;
   border: none;
-  background-color: #007BFF;
-  color: white;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  margin-right: 8px;
   transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #0056b3;
+.pets-table button:hover {
+  background-color: #1E90FF; /* Darker sky blue on hover */
 }
 
-button:active {
-  background-color: #00408d;
+.pets-table button:focus {
+  outline: none;
 }
 
-ng-template {
+.ng-template p {
   text-align: center;
+  color: #333;
   font-size: 1.2rem;
-  color: #777;
-  margin-top: 20px;
 }
+

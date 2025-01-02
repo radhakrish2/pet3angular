@@ -1,113 +1,87 @@
-/* Navbar Styling */
-app-navbar {
-  display: block;
+body, html {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  background-color: #2c3e50;
-  color: white;
-  padding: 15px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: #333;
 }
 
-app-navbar a {
-  color: white;
-  text-decoration: none;
-  margin-right: 15px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #87CEEB; /* Sky blue background */
+}
+
+.login-container {
+  background-color: #ffffff; /* White background for the form container */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card h2 {
+  text-align: center;
+  color: #1E90FF; /* Sky blue color for the heading */
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
   font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
-app-navbar a:hover {
-  color: #f39c12;
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #1E90FF; /* Sky blue border */
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
 }
-/* General styling */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f3f4f6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  /* Login container */
-  .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  /* Login card */
-  .login-card {
-    background: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 30px 25px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .login-card h2 {
-    margin-bottom: 20px;
-    color: #333333;
-  }
-  
-  /* Form groups */
-  .form-group {
-    margin-bottom: 20px;
-    text-align: left;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
-    color: #555555;
-  }
-  
-  .form-group input {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
-  /* Login button */
-  .btn-login {
-    width: 100%;
-    background-color: #4caf50;
-    color: #ffffff;
-    padding: 10px 0;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .btn-login:hover {
-    background-color: #45a049;
-  }
-  
-  /* Extra links */
-  .extra-links {
-    margin-top: 15px;
-    font-size: 14px;
-  }
-  
-  .extra-links a {
-    display: block;
-    color: #4caf50;
-    text-decoration: none;
-    margin: 5px 0;
-  }
-  
-  .extra-links a:hover {
-    text-decoration: underline;
-  }
-  
+
+.form-group input:focus {
+  border-color: #00BFFF; /* Light sky blue on focus */
+  box-shadow: 0 0 5px rgba(0, 191, 255, 0.5);
+}
+
+.btn-login {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: #00BFFF; /* Light sky blue button */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #1E90FF; /* Darker sky blue on hover */
+}
+
+.extra-links {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.extra-links a {
+  display: block;
+  color: #1E90FF;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}

@@ -62,7 +62,7 @@ export class PostpetComponent {
         description: this.petForm.value.description,
         status: this.petForm.value.status,
         imageUrls: [], // Will be handled by backend
-        ownerId: this.user.id, // Replace with actual owner ID logic
+        owner: this.user, // Replace with actual owner ID logic
        comments:[]
       };
 

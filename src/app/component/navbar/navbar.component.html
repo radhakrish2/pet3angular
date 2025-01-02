@@ -10,8 +10,7 @@
       <li><a routerLink="/home">Home</a></li>
       <li><a routerLink="/home/postpet">Post Pet</a></li>
       <li><a routerLink="/home/profile">Profile</a></li>
-      <li><a routerLink="/about">About Us</a></li>
-      <li><a routerLink="/contact">Contact</a></li>
+    
       <li *ngIf="isAdmin" class="admin-link"><a routerLink="/admin">Admin</a></li>
     </ul>
 
@@ -23,7 +22,7 @@
           <div *ngIf="dropdownOpen" class="dropdown-menu">
             <span class="user-name">{{ user.name }}</span>
             <a routerLink="/settings">Settings</a>
-            <a (click)="onLogout()" routerLink="/">Logout</a>
+            <a href="#" (click)="onLogout()" routerLink="/">Logout</a>
           </div>
         </div>
       </ng-container>
